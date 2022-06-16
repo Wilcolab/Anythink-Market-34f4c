@@ -18,3 +18,4 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 5. Check backend is running by pointing your browser to ('http://localhost:3000/api/ping)
 6. Chekc frontend is running by pointing your browser to ('http://localhost:3001/register')
 7. Create a new user
+
