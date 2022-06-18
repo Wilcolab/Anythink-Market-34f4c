@@ -23,7 +23,7 @@ var UserSchema = new mongoose.Schema(
       index: true
     },
     bio: String,
-    image: String,
+    image: { type: String, default: "https://static.productionready.io/images/smiley-cyrus.jpg" },
     role: {
       type: String,
       enum: ["user", "admin"],
