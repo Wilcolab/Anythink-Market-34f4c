@@ -50,8 +50,12 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                src={this.props.item.image}
-                alt={this.props.item.title}
+                src={
+                  this.props.item.image
+                    ? this.props.item.image
+                    : "../placeholder.png"
+                }
+                alt={"this.props.item.title" + Date.now()}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
               />
