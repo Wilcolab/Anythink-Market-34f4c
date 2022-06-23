@@ -19,7 +19,8 @@ async function main() {
   for (let i = 0; i < 100; i++) {
     const user = new User();
     user.username = `user${i}`;
-    user.email = `user${i}@gmail.com`;
+    user.email = `user${i}@user.com`;
+    user.setPassword(`12345`);
     await user.save();
 
     const item = new Item({
