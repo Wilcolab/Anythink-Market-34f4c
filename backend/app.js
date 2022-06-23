@@ -27,7 +27,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(
   session({
-    secret:"WILCOAPP",
+    secret:"process.env.SECRET",
     cookie: { maxAge: 60000 },
     resave: false,
     saveUninitialized: false
