@@ -42,6 +42,10 @@ if (!process.env.MONGODB_URI) {
   console.warn("Missing MONGODB_URI in env, please add it to your .env file");
 }
 
+if (!process.env.SECRET) {
+  console.warn("Missing SECRET in env, please add it to your .env file");
+}
+
 mongoose.connect(process.env.MONGODB_URI);
 if (isProduction) {
 } else {
