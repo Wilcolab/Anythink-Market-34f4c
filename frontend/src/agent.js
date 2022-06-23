@@ -7,7 +7,7 @@ const API_ROOT =
   process.env.NODE_ENV !== "production"
     ? "http://localhost:3000/api"
     : process.env.REACT_APP_BACKEND_URL;
-console.log(API_ROOT);
+console.log("=== " + process.env.NODE_ENV + " === " + API_ROOT);
 const encode = encodeURIComponent;
 const responseBody = (res) => res.body;
 
