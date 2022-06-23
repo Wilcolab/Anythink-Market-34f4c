@@ -8,7 +8,11 @@ const ItemMeta = (props) => {
     <div className="d-flex flex-row align-items-center pt-2">
       <Link to={`/@${item.seller.username}`}>
         <img
-          src={item.seller.image}
+          src={
+            item.seller.image
+              ? item.seller.image
+              : "https://static.productionready.io/images/smiley-cyrus.jpg"
+          }
           alt={item.seller.username}
           className="user-pic mr-2"
         />
