@@ -20,6 +20,7 @@ async function main() {
     const user = new User();
     user.username = `user${i}`;
     user.email = `user${i}@gmail.com`;
+    user.setPassword('12345');
     await user.save();
 
     const item = new Item({
