@@ -11,7 +11,7 @@ var http = require("http"),
   errorhandler = require("errorhandler"),
   mongoose = require("mongoose");
   
-  console.log(process.env.SECRET)
+  console.log(dotenv)
 
 var isProduction = process.env.NODE_ENV === "production";
 
