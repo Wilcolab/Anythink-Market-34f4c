@@ -23,5 +23,5 @@ var auth = {
     getToken: getTokenFromHeader
   })
 };
-
+console.log("#######secret is " + secret);
 module.exports = auth;
