@@ -1,4 +1,5 @@
-require("dotenv").config();
+// require("dotenv").config();
+const dotenv = require('dotenv').config()
 var http = require("http"),
   path = require("path"),
   methods = require("methods"),
@@ -9,6 +10,8 @@ var http = require("http"),
   passport = require("passport"),
   errorhandler = require("errorhandler"),
   mongoose = require("mongoose");
+  
+  console.log(process.env.SECRET)
 
 var isProduction = process.env.NODE_ENV === "production";
 
