@@ -24,7 +24,9 @@ app.use(bodyParser.json());
 
 app.use(require("method-override")());
 app.use(express.static(__dirname + "/public"));
-
+if (!process.env.SECRET ) {
+  console.warn("Missing SECRET in env, please add it to your .env file");
+}
 app.use(
   session({
     secret: process.env.SECRET,
