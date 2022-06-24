@@ -43,9 +43,14 @@ body {
   border-radius: 100px;
 }
 
-.item-img {
-  height: 150px;
-  object-fit: cover;
+.search-bar {
+  width: 300px;
+  height: 30px;
+  padding-left: 10px;
+  background: url("https://img.icons8.com/nolan/64/search.png") no-repeat right;
+  background-size: 25px;
+  border-radius: 7px;
+  background-color: #f2f2f2;
 }
 
 .crop-text-3 {
@@ -56,6 +61,9 @@ body {
   -webkit-box-orient: vertical;
 }
 
-.user-info {
-  min-width: 800px;
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 10px 12px;
+  pointer-events: none;
 }
