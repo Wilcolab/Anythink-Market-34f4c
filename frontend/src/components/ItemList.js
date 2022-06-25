@@ -9,9 +9,9 @@ const ItemList = (props) => {
 
   if (props.items.length === 0) {
     return (
-      <div>
-        <div viclassName="container-div" />
-        <p className="py-4 no-items" id="empty">
+      <div id="empty">
+        <div className="container-div" />
+        <p className="py-4 no-items">
           No items found for <b>"boring {props.title}".</b>
         </p>
       </div>
