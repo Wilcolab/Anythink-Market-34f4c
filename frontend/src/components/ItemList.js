@@ -12,7 +12,7 @@ const ItemList = (props) => {
       <div id="empty">
         <div className="container-div" />
         <p className="py-4 no-items">
-          No items found for <b>"boring {props.title}."</b>
+          No items found for <b>"boring {props.title}".</b>
         </p>
       </div>
     );
