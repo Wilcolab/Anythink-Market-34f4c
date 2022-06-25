@@ -9,11 +9,9 @@ const ItemList = (props) => {
 
   if (props.items.length === 0) {
     return (
-      <div id="get-part">
-        <div className="container-div" />
-        <p className="py-4 no-items" id="empty">
-          No items found for <b>"boring {props.title}".</b>
-        </p>
+      <div className="py-4" id="empty">
+        <span>no items found for </span>
+        <span>"{props.title}"</span>
       </div>
     );
   }
