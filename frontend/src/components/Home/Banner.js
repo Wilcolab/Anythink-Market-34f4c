@@ -12,6 +12,14 @@ const Banner = (props) => {
         (page) => agent.Items.byTitle(event.target.value, page),
         agent.Items.byTitle(event.target.value)
       );
+    } else {
+      const tab = "all";
+      const itemsPromise = agent.Items.all;
+      props.onLoad(
+        tab,
+        itemsPromise,
+        Promise.all([agent.Tags.getAll(), itemsPromise()])
+      );
     }
   }
   return (
