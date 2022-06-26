@@ -15,6 +15,14 @@ var isProduction = process.env.NODE_ENV === "production";
 // Create global app object
 var app = express();
 
+// load NR agent
+const newrelic = require('newrelic');
+// instrument express after the agent has been loaded
+newrelic.instrumentLoadedModule(
+  'express',    // the module's name, as a string
+  app // the module instance
+);
+
 app.use(cors());
 
 // Normal express config defaults
