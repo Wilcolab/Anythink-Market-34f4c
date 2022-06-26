@@ -4,14 +4,14 @@ import React from "react";
 
 const ItemList = (props) => {
   if (!props.items) {
-    return <div className="py-4">Loading...</div>;
+    return <div id="empty" className="py-4">Loading...</div>;
   }
 
   if (props.items.length === 0) {
     return (
-      <div id="empty">
+      <div>
         <div className="container-div" />
-        <p className="py-4 no-items">
+        <p className="py-4 no-items" id="empty">
           No items found for <b>"boring {props.title}".</b>
         </p>
       </div>
