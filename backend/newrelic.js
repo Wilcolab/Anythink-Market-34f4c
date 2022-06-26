@@ -1,5 +1,3 @@
-const license_key = process.env.NEW_RELIC_LICENSE_KEY;
-const app_name = process.env.NEW_RELIC_LICENSE_KEY;
 'use strict'
 /**
  * New Relic agent configuration.
@@ -11,11 +9,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: app_name,
+  // app_name: app_name,
   /**
    * Your New Relic license key.
    */
-  license_key: license_key,
+  // license_key: license_key,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
