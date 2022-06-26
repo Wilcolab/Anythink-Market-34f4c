@@ -25,7 +25,6 @@ const Banner = (props) => {
   }
 
   function handleClick(event) {
-    console.log(event.target);
     setVisible(!visible);
   }
   return (
