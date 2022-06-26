@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../imgs/logo.png";
 import agent from "../../agent";
 
 const Banner = (props) => {
+  const [visible, setVisible] = useState(false); // visibility state
   function handleChange(event) {
     let length = event.target.value.length;
 
@@ -22,21 +23,32 @@ const Banner = (props) => {
       );
     }
   }
+
+  function handleClick(event) {
+    console.log(event.target);
+    setVisible(!visible);
+  }
   return (
     <div className="banner text-white">
       <div className="container p-4 text-center">
         <img src={logo} alt="banner" />
         <div>
-          <span id="get-part" style={{ paddingRight: "10px" }}>
+          <span
+            id="get-part"
+            style={{ paddingRight: "10px" }}
+            onClick={handleClick}
+          >
             A place to get
           </span>
           <span>
-            <input
-              className="search-bar"
-              id="search-box"
-              placeholder="What is it that you truly desire"
-              onChange={handleChange}
-            />
+            {visible && (
+              <input
+                className="search-bar"
+                id="search-box"
+                placeholder="What is it that you truly desire"
+                onChange={handleChange}
+              />
+            )}
           </span>
           <span style={{ paddingLeft: "10px" }}> the cool sfuff</span>
         </div>
